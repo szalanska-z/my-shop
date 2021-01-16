@@ -135,8 +135,9 @@ h3 {
   .cosmetics-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3%;
+    column-gap: 3%;
     .cosmetic-item {
+      margin-bottom: 15px;
       &--img {
         height: 200px;
         width: auto;

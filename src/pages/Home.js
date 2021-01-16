@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const Home = () => {
 	return (
@@ -45,7 +46,13 @@ const Home = () => {
 								nesciunt repudiandae, vero omnis ut provident corrupti deleniti
 								rem voluptatem officia, nulla debitis distinctio delectus.
             </p>
-							<button className="btn border-dark btn_gallery" data-toggle="modal" data-target="#modal-drawers">Zobacz produkty</button>
+							{/* <button className="btn border-dark btn_gallery" data-toggle="modal" data-target="#modal-drawers">Zobacz produkty</button> */}
+							<Link to={{
+								pathname: `/shop`,
+								state: { category: "face" },
+							}}>
+								<button className="btn border-dark btn_gallery">Zobacz produkty</button>
+							</Link>
 						</div>
 					</div>
 					<div className="row d-flex justify-content-center align-items-center mb-5">
@@ -63,7 +70,13 @@ const Home = () => {
 								explicabo! Aut itaque sunt praesentium, aperiam temporibus nisi
 								eveniet aspernatur natus animi, eum minus.
             </p>
-							<button className="btn border-dark btn_gallery" data-toggle="modal" data-target="#modal-beds" >Zobacz produkty</button>
+							{/* <button className="btn border-dark btn_gallery" data-toggle="modal" data-target="#modal-beds" >Zobacz produkty</button> */}
+							<Link to={{
+								pathname: `/shop`,
+								state: { category: "body" },
+							}}>
+								<button className="btn border-dark btn_gallery">Zobacz produkty</button>
+							</Link>
 						</div>
 					</div>
 					<div className="row d-flex justify-content-center align-items-center mb-5">
@@ -81,7 +94,13 @@ const Home = () => {
 								nesciunt repudiandae, vero omnis ut provident corrupti deleniti
 								rem voluptatem officia, nulla debitis distinctio delectus.
             </p>
-							<button className="btn border-dark btn_gallery" data-toggle="modal" data-target="#modal-chairs">Zobacz produkty</button>
+							{/* <button className="btn border-dark btn_gallery" data-toggle="modal" data-target="#modal-chairs">Zobacz produkty</button> */}
+							<Link to={{
+								pathname: `/shop`,
+								state: { category: "hair" },
+							}}>
+								<button className="btn border-dark btn_gallery">Zobacz produkty</button>
+							</Link>
 						</div>
 					</div>
 				</div>

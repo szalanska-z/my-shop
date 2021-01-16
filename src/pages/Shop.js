@@ -8,21 +8,74 @@ const Shop = (props) => {
 	const [category, setCategory] = useState('');
 	const [subCategory, setSubCategory] = useState('');
 	const [filter, setFilter] = useState('');
+	// const [filteredCosmetics, setFilteredCosmetics] = useState([]);
 
-	console.log(category, subCategory);
+	useEffect(() => {
+		if (props.location.state) {
+			setCategory(props.location.state.category)
+		}
+	}, [props.location.state]);
+
+	// console.log(category, subCategory, filter)
+
+	let newCosmetics = [...cosmetics]
+
+	// console.log(newCosmetics);
+
+	const filterCosmetics = () => {
+		if (category !== "") {
+			newCosmetics = newCosmetics.filter((cosmetic) => {
+				return (
+					cosmetic.category === category
+				)
+			})
+		}
+		if (subCategory !== "") {
+			newCosmetics = newCosmetics.filter((cosmetic) => {
+				return (
+					cosmetic.subcategory === subCategory
+				)
+			})
+		}
+		if (filter !== "") {
+			newCosmetics = newCosmetics.sort((a,b) => {
+				if(filter  === "asc") {
+					if(a.price < b.price) {
+						return -1
+					} else if(a.price > b.price) {
+						return 1
+					} else if(a.price === b.price) {
+						return 0
+					}
+				} else if(filter === "desc") {
+					if(a.price > b.price) {
+						return -1
+					} else if(a.price < b.price) {
+						return 1
+					} else if(a.price === b.price) {
+						return 0
+					}
+				}
+				return newCosmetics
+			})
+		}
+	}
+	filterCosmetics();
+
+
 
 	return (
 		<div className="container" id="shop">
 			<div className="row">
 				<div className="col-3">
-					<Categories setCategory={(value) => setCategory(value)} setSubCategory={(value) => setSubCategory(value)}/>
+					<Categories setCategory={(value) => setCategory(value)} setSubCategory={(value) => setSubCategory(value)} />
 				</div>
 				<div className="col-9">
 					<div className="filters-container">
-						<Filters setFilter={(value) => setFilter(value)}/>
+						<Filters setFilter={(value) => setFilter(value)} />
 					</div>
 					<div className="cosmetics-container">
-						{cosmetics.map(cosmetic => (
+						{newCosmetics.map(cosmetic => (
 							<ProductCard key={cosmetic.id} cosmetic={cosmetic} />
 						))}
 					</div>

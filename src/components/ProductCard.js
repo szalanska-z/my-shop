@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProductCard = ({cosmetic}) => {
+const ProductCard = ({ cosmetic }) => {
 	return (
 		<div className="cosmetic-item">
 			<Link to={{
