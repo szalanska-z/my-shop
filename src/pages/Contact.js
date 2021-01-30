@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Contact.scss';
 
 const Contact = () => {
 	return (
@@ -6,7 +7,7 @@ const Contact = () => {
 			<div className="container">
 				<h1 className="heading">Kontakt</h1>
 				<div className="row">
-					<div className="col-lg-6 p-5 rounded text-center" style={{backgroundColor: '#EBCAC1'}} >
+					<div className="col-lg-6 p-5 rounded text-center contact-left"  >
 						<p className="mb-5">
 							Zachęcamy do kontaktu mailowego oraz telefonicznego, konsultacje i wycena są całkowicie bezpłatne.
 							Wycena obejmuje pomiar, projekt, dostawę i montaż. Gwarantujemy konkurencyjne ceny, profesjonalne wykonanie i fachowe doradztwo na każdym etapie realizacji zlecenia.
@@ -14,12 +15,12 @@ const Contact = () => {
 							Większe realizacje wykonujemy również na terenie całego kraju.
 							</p>
 						<h3>Adres:</h3>
-						<p>ul.Grota Roweckiego 27</p>
-						<p>35-302 Rzeszów</p>
+						<p className="contact-text--bold">ul.Grota Roweckiego 27</p>
+						<p className="contact-text--bold">35-302 Rzeszów</p>
 						<h3>Telefon:</h3>
-						<p>+48 695 250 618</p>
+						<p className="contact-text--bold">+48 695 250 618</p>
 					</div>
-					<div className="col-lg-6 p-5">
+					<div className="col-lg-6 p-5 contact-right">
 						<h3 className="mb-4 text-center text-md-left">Napisz do nas</h3>
 						<form action="">
 							<div className="form-group">

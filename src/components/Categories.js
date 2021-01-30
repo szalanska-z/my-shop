@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Categories.scss';
 
 
 const Categories = (props) => {
@@ -14,7 +15,7 @@ const Categories = (props) => {
 
 	return (
 		<div id="categories" className="categories">
-			<h2 className="categories--title">Kategorie</h2>
+			{/* <h2 className="categories--title">Kategorie</h2> */}
 			<div className="categories-content">
 				<div>
 					<h3 onClick={() => changeCategory("face")}>Twarz</h3>

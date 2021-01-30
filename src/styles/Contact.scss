@@ -1,0 +1,31 @@
+@import './Variables.scss';
+
+#contact {
+  .contact-left {
+    background-color:#B4C6C5;
+    h3 {
+      color: white;
+      font-weight: 500;
+    }
+    .contact-text--bold {
+      font-weight: bold;
+    }
+  }
+  .contact-right {
+    h3 {
+      color: #CFA88B;
+    }
+	}
+	.btn.btn_contact {
+		background-color: black;
+		color: white;
+		padding: 0.8rem 0.6rem;
+		letter-spacing: 1px;
+		transition: 0.3s;
+		&:hover {
+			background-color: white;
+			border: 1px solid black;;
+			color: black;
+		}
+	}
+}

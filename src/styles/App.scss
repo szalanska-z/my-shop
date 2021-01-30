@@ -1,0 +1,186 @@
+@import './Variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin-top: 96px;
+}
+
+nav {
+  border-bottom: 1px solid black;
+  transition: 0.3s ease;
+  ul {
+    li.nav-item {
+      padding: 0 1rem;
+      transition: 0.3s;
+      a {
+        color: $color-three;
+      }
+      &:hover {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+//logo menu//
+.logo {
+  width: 80px;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.heading {
+  text-align: center;
+  padding: 20px 40px;
+  letter-spacing: 1px;
+}
+
+.card-title {
+  border-bottom: 1px solid $color-four;
+  padding-bottom: 5px;
+  font-size: 24px;
+}
+
+.card-body {
+  font-size: 16px;
+  padding: 20px;
+}
+.jumbotron-fluid {
+  background-color: $header-color;
+  // background-color: $color-one;
+}
+
+.img-fluid.img_gallery {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 20px solid #f0f2fb;
+  transition: 0.3s;
+  @media all and (min-width: 668px) {
+    &.img_gallery:hover {
+      transform: scale(1.4);
+    }
+  }
+  @media all and (min-width: 577px) {
+    &.img_gallery {
+      width: 440px;
+      height: 440px;
+    }
+    &.img_gallery:hover {
+      transform: scale(1.2);
+    }
+  }
+  @media all and (min-width: 415px) and (max-width: 576px) {
+    &.img_gallery {
+      width: 360px;
+      height: 360px;
+    }
+  }
+  @media all and (max-width: 414px) {
+    &.img_gallery {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+h3 {
+  color: black;
+  padding: 20px 0;
+}
+
+.btn.btn_gallery {
+  padding: 10px 20px;
+  background-color: $header-color;
+  background-color: $color-five;
+  color: white;
+  transition: 0.3s;
+  font-size: 1.1rem;
+  &:hover {
+    // transform: scale(1.1);
+    color: white;
+    background-color: black;
+  }
+}
+
+.fab {
+  color: white;
+  font-size: 30px;
+  padding: 0 10px;
+}
+
+
+.card {
+  overflow: hidden;
+}
+.card-body {
+  background-color: #2b3c68;
+  color: white;
+  text-align: center;
+  height: 180px;
+}
+
+//style React//
+
+#main {
+  margin-top: 100px;
+  
+}
+
+
+
+.jumbotron-fluid {
+  .natural-images {
+    margin-top: 2rem;
+    .natural-img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 186px;
+      img {
+          width: 100px;
+      }
+       p {
+         font-size: 14px;
+         margin-top: 1rem;
+       }
+    }
+  }
+}
+
+//ogolne style dla obrazkow w kolkach
+.natural-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin: 0 20px;
+    width: 150px;
+    height: auto;
+    }
+}
+
+
+#about {
+  .natural-images {
+    margin-top: 3rem;
+    img {
+      width: 100px;
+      }
+  }
+}
+
