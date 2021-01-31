@@ -14,10 +14,16 @@ const ProductCard = ({ cosmetic }) => {
 				pathname: `/product/${cosmetic.id}`,
 				state: { cosmetic },
 			}}>
+				<h2 className="cosmetic-item--name">{cosmetic.name}</h2>
+			</Link>
+			<Link to={{
+				pathname: `/product/${cosmetic.id}`,
+				state: { cosmetic },
+			}}>
 				<h2 className="cosmetic-item--title">{cosmetic.title}</h2>
 			</Link>
 			<p className="cosmetic-item--capacity">{cosmetic.capacity}</p>
-			<p className="cosmetic-item--price">{cosmetic.price}zł</p>
+			<p className="cosmetic-item--price">{(cosmetic.price).toFixed(2)}zł</p>
 		</div>
 	);
 }

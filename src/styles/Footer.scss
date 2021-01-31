@@ -3,6 +3,11 @@
 #footer {
 	// background-color: $color-footer-bg;
   background-color: $color-five;
+  background-color: $color-six;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   a {
     text-decoration: none;
     .icon-social {

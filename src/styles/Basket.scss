@@ -1,0 +1,77 @@
+@import "./Variables.scss";
+
+#basket {
+  .basket-start-img {
+    width: 50px;
+    height: auto;
+    object-fit: cover;
+  }
+  .table {
+    td {
+      vertical-align: middle;
+    }
+  }
+  .btn-next {
+    height: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: black;
+    background-color: $header-color;
+    border: none;
+    transition: 0.3s;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+  .btn-prev {
+    height: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: black;
+    background-color: $color-two;
+    border: none;
+    transition: 0.3s;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .basketStep1 {
+    padding: 2rem 0;
+    width: 100%;
+    .basket-step1-title {
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    form {
+      input {
+        border-radius: 0;
+      }
+      label {
+        font-weight: bold;
+      }
+    }
+    p {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.4rem;
+      padding-right: 2rem;
+    }
+  }
+  .basketStep-totalAmount {
+    font-weight: bold;
+  }
+
+  .basketStep2 {
+    padding: 2rem 0;
+    h2 {
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+}

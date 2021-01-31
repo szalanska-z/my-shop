@@ -1,22 +1,53 @@
-import React from 'react';
-
+import React from "react";
 
 const Filters = (props) => {
-	return (
-		<div id="filters" className="filters">
-			<div className="filters-sort">
-				<span>Sortuj</span>
-				<div className="btn-group">
-					<button className="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> wybierz
-  				</button>
-					<div className="dropdown-menu">
-						<li className="dropdown-item" onClick={() => props.setFilter("asc")}>cena rosnąco</li>
-						<li className="dropdown-item" onClick={() => props.setFilter("desc")}>cena malejąco</li>
-  				</div>
-				</div>
-			</div>
-		</div>
-	);
-}
+  return (
+    <div id="filters" className="filters">
+      <div className="filters-sort">
+        <p>Wybierz sortowanie</p>
+        <div className="form-check d-inline-block">
+          <input
+            onChange={() => props.setFilter("asc")}
+            className="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios1"
+            value="asc"
+          />
+          <label
+            className={
+              props.filter === "asc"
+                ? "form-check-label active"
+                : "form-check-label"
+            }
+            htmlFor="exampleRadios1"
+          >
+            Rosnąco
+          </label>
+        </div>
+        <div className="form-check d-inline-block">
+          <input
+            onChange={() => props.setFilter("desc")}
+            className="form-check-input"
+            type="radio"
+            name="exampleRadios"
+            id="exampleRadios2"
+            value="desc"
+          />
+          <label
+            className={
+              props.filter === "desc"
+                ? "form-check-label active"
+                : "form-check-label"
+            }
+            htmlFor="exampleRadios2"
+          >
+            Malejąco
+          </label>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Filters;

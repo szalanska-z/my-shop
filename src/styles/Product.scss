@@ -1,0 +1,110 @@
+@import "./Variables.scss";
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#product {
+  .product-container {
+    .product-right {
+      padding: 3rem;
+      h2 {
+        font-weight: bold;
+      }
+      .product-desc {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $header-color;
+      }
+      .product-cap {
+        font-size: 1.2rem;
+      }
+      .product-price {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .add-product {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 56px;
+        .add-product-subtraction,
+        .add-product-addition {
+          // display: inline-block;
+          height: 100%;
+          width: 56px;
+          line-height: 56px;
+          text-align: center;
+          font-size: 2rem;
+          // border: 1px solid black;
+          cursor: pointer;
+        }
+        #product-input {
+          display: inline-block;
+          -webkit-appearance: none;
+          margin: 0;
+          -moz-appearance: textfield;
+          font-size: 1rem;
+          color: black;
+          background-color: $header-color;
+          border: none;
+          height: 100%;
+          width: 56px;
+          text-align: center;
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          &[type="number"] {
+            -moz-appearance: textfield;
+          }
+        }
+        .btn-product {
+          height: 100%;
+          padding: 1rem 2rem;
+          font-size: 1rem;
+          color: black;
+          background-color: $header-color;
+          border: none;
+          transition: 0.3s;
+          &:hover {
+            background-color: black;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .modal {
+    .modal-content {
+      border-radius: 0;
+      border: none;
+    }
+    .modal-body {
+      padding: 2rem;
+      text-align: center;
+      p {
+        font-size: 2rem;
+      }
+      button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        color: black;
+        background-color: $header-color;
+        border: none;
+        border-radius: 0;
+        transition: 0.3s;
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}

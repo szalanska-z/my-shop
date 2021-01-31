@@ -1,0 +1,92 @@
+@import "./Variables.scss";
+
+#shop {
+  #categories {
+    padding: 0.4rem 1rem;
+    .categories--title {
+      text-align: center;
+    }
+    .categories-content {
+      h3 {
+        &.active {
+          background-color: $color-six;
+        }
+        background-color: $header-color;
+        font-size: 1.5rem;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background-color: $color-six;
+        }
+      }
+      p {
+        padding: 0 1rem;
+        cursor: pointer;
+        line-height: 1.8rem;
+        &.active {
+          font-weight: bold;
+        }
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .filters-container {
+    padding: 1rem 0;
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .form-check {
+      margin-right: 1.5rem;
+      .form-check-label {
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .cosmetics-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3%;
+    .cosmetic-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      border: 1px solid $header-color;
+      &--img {
+        height: 200px;
+        width: auto;
+      }
+      &--title {
+        color: black;
+        font-size: 14px;
+        text-align: center;
+        min-height: 56px;
+      }
+      &--name {
+        color: black;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+      }
+      &--capacity {
+        text-align: center;
+        font-size: 14px;
+      }
+      &--price {
+        text-align: right;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -14,8 +14,28 @@ import Navigation from './components/Navigation'
 import Product from './pages/Product';
 
 function App() {
+
+  window.addEventListener('load', () => {
+    const navHeight = document.querySelector('.navbar').offsetHeight;
+    // console.log(navHeight);
+    const main = document.getElementById('main');
+    main.style.marginTop = navHeight + 'px';
+    const footerHeight = document.getElementById('footer').offsetHeight;
+    main.style.paddingBottom = footerHeight + 40 + 'px';
+  });
+  window.addEventListener('resize', () => {
+    const navHeight = document.querySelector('.navbar').offsetHeight;
+    // console.log(navHeight);
+    const main = document.getElementById('main');
+    main.style.marginTop = navHeight + 'px';
+    const footerHeight = document.getElementById('footer').offsetHeight;
+    main.style.paddingBottom = footerHeight + 40 + 'px';
+  });
+
+
+
   return (
-    <Router>
+    <Router basename="/ecoshop">
       <Navigation />
       <main id="main">
         <Switch>

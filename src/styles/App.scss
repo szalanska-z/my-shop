@@ -13,6 +13,10 @@ html {
 
 body {
   margin-top: 96px;
+  #root {
+    min-height: calc(100vh - 107px);
+    position: relative;
+  }
 }
 
 nav {
@@ -144,6 +148,9 @@ h3 {
 
 .jumbotron-fluid {
   .natural-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     .natural-img {
       display: flex;
@@ -159,28 +166,25 @@ h3 {
          margin-top: 1rem;
        }
     }
+    @media(max-width: 768px) {
+      flex-direction: column;
+    }
   }
 }
 
-//ogolne style dla obrazkow w kolkach
-.natural-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    margin: 0 20px;
-    width: 150px;
-    height: auto;
-    }
-}
-
-
 #about {
   .natural-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 3rem;
     img {
       width: 100px;
+      height: auto;
+      margin: 0 20px;
       }
+    @media( max-width: 768px) {
+    }
   }
 }
 
