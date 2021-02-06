@@ -79,8 +79,37 @@
           }
         }
       }
+      @media (max-width: 576px) {
+        padding: 1rem 2rem;
+        h2 {
+          text-align: center;
+          font-size: 1.8rem;
+        }
+        .product-desc {
+          text-align: center;
+        }
+        .add-product {
+          .btn-product {
+            padding: 1rem;
+          }
+        }
+      }
+      @media (max-width: 360px) {
+        .add-product {
+          .btn-product {
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .product-left {
+      img {
+        max-width: 100%;
+      }
     }
   }
+
   .modal {
     .modal-content {
       border-radius: 0;

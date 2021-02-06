@@ -12,7 +12,7 @@ const BasketStep2 = (props) => {
   });
 
   return (
-    <div className="basketStep2">
+    <div className="basketStep2 px-3 px-sm-0">
       <h2>Dziękujemy za złożenie zamówienia!</h2>
       <h3>Twoje dane:</h3>
       <p>{state.name}</p>

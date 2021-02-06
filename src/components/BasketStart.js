@@ -21,13 +21,17 @@ const BasketStart = () => {
   };
 
   return (
-    <div className="basket-container w-100 py-5">
+    <div className="basket-container py-5 px-3">
       <table className="table">
         <thead>
           <tr className="text-center">
             <th scope="col">Produkty</th>
-            <th scope="col">Cena za sztukę</th>
-            <th scope="col">Ilość</th>
+            <th className="basket-column-rwd" scope="col">
+              Cena za sztukę
+            </th>
+            <th className="basket-column-rwd" scope="col">
+              Ilość
+            </th>
             <th scope="col">Cena całkowita</th>
             <th scope="col">Usuń</th>
           </tr>
@@ -44,16 +48,18 @@ const BasketStart = () => {
                   />
                   {product.cosmetic.name}
                 </td>
-                <td>{product.cosmetic.price.toFixed(2)}</td>
-                <td>{product.amount}</td>
+                <td className="basket-column-rwd">
+                  {product.cosmetic.price.toFixed(2)}
+                </td>
+                <td className="basket-column-rwd">{product.amount}</td>
                 <td>{(product.cosmetic.price * product.amount).toFixed(2)}</td>
                 <td onClick={() => deleteProduct(index)}>X</td>
               </tr>
             );
           })}
           <tr className="text-center">
-            <td></td>
-            <td></td>
+            <td className="basket-column-rwd"></td>
+            <td className="basket-column-rwd"></td>
             <td>SUMA</td>
             <td>{totalAmount}zł</td>
             <td></td>

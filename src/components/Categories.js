@@ -19,7 +19,7 @@ const Categories = (props) => {
         <div>
           <h3
             onClick={() => changeCategory("face")}
-            className={props.category === "face" ? "active" : ""}
+            className={props.category === "face" ? "face-active" : "face-cat"}
           >
             Twarz
           </h3>
@@ -45,7 +45,7 @@ const Categories = (props) => {
         <div>
           <h3
             onClick={() => changeCategory("hair")}
-            className={props.category === "hair" ? "active" : ""}
+            className={props.category === "hair" ? "hair-active" : "hair-cat"}
           >
             Włosy
           </h3>
@@ -71,7 +71,7 @@ const Categories = (props) => {
         <div>
           <h3
             onClick={() => changeCategory("body")}
-            className={props.category === "body" ? "active" : ""}
+            className={props.category === "body" ? "body-active" : "body-cat"}
           >
             Ciało
           </h3>

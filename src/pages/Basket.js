@@ -41,7 +41,7 @@ const Basket = () => {
         )}
         {step === "2" && <BasketStep2 state={state} />}
       </div>
-      <div className="row basket-button w-100">
+      <div className="row basket-button px-3 d-flex justify-content-end">
         {step === "1" && (
           <button
             className=" btn-prev btn-danger mr-auto"
@@ -52,7 +52,7 @@ const Basket = () => {
         )}
         {step !== "2" && (
           <button
-            className="btn-next btn-warning ml-auto"
+            className="btn-next btn-warning"
             onClick={() => handleStepNext()}
           >
             Przejdź dalej

@@ -15,9 +15,9 @@ const BasketStep1 = (props) => {
   });
 
   return (
-    <div className="basketStep1">
+    <div className="basketStep1 px-3">
       <div className="row">
-        <div className="col-6">
+        <div className="col-12 col-lg-6 mx-auto">
           <h2 className="basket-step1-title">Twoje dane</h2>
           <form>
             <div className="form-group">
@@ -84,7 +84,7 @@ const BasketStep1 = (props) => {
             </div>
           </form>
         </div>
-        <div className="col-6">
+        <div className="col-12 col-lg-6 mx-auto">
           <h2 className="basket-step1-title">Podsumowanie zamówienia</h2>
           <p>
             Kwota do zapłaty:{" "}

@@ -4,9 +4,6 @@ import Slider from "../components/Slider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // import discount from '../images/discount-color.svg'
-import photo1 from "../images/cosmetics/cos_3.jpg";
-import photo2 from "../images/cosmetics/cos_7.jpg";
-import photo3 from "../images/cosmetics/cos_8.jpg";
 import photo4 from "../images/others/handmade.png";
 import photo5 from "../images/others/natural.png";
 import photo6 from "../images/others/vegan.png";
@@ -15,6 +12,9 @@ import photo8 from "../images/others/handmade3.png";
 import photo9 from "../images/others/natural3.png";
 import photo10 from "../images/others/vegan3.png";
 import photo11 from "../images/others/crueltyfree3.png";
+import hair from "../images/others/hair2.jpg";
+import face from "../images/others/face3.jpg";
+import body from "../images/others/cialo3.jpg";
 
 const Home = () => {
   useEffect(() => {
@@ -26,9 +26,7 @@ const Home = () => {
       <div className="jumbotron-fluid pt-5 pb-2">
         <div className="container text-center">
           <h1 className="display-3">Eco Shop</h1>
-          <p className="font-italic lead" style={{ fontSize: "30px" }}>
-            Kosmetyki naturalne
-          </p>
+          <p className="font-italic lead">Kosmetyki naturalne</p>
         </div>
         <div className="natural-images">
           <div className="natural-img">
@@ -53,8 +51,8 @@ const Home = () => {
         <Slider />
       </div>
       <section id="about" className="mt-0 mb-4">
-        <div className="about_bg container-fluid py-5">
-          <div className="container py-5">
+        <div className="about_bg container-fluid">
+          <div className="container py-3 py-lg-5">
             <div className="row">
               <div className="col">
                 <h1 className="heading">O nas</h1>
@@ -88,8 +86,8 @@ const Home = () => {
             <div className="col-lg-6 mb-3">
               <img
                 className="img-fluid d-block mx-auto img_gallery"
-                src="https://nordicdesign.ca/wp-content/uploads/2017/03/meraki7.jpg"
-                // src={photo1}
+                // src="https://nordicdesign.ca/wp-content/uploads/2017/03/meraki7.jpg"
+                src={face}
                 alt=""
               />
             </div>
@@ -116,8 +114,8 @@ const Home = () => {
             <div className="col-lg-6 order-lg-2 mb-3">
               <img
                 className="img-fluid d-block mx-auto img_gallery"
-                src="https://nordicdesign.ca/wp-content/uploads/2017/03/meraki7.jpg"
-                // src={photo2}
+                // src="https://nordicdesign.ca/wp-content/uploads/2017/03/meraki7.jpg"
+                src={body}
                 alt=""
               />
             </div>
@@ -144,8 +142,8 @@ const Home = () => {
             <div className="col-lg-6 mb-3">
               <img
                 className="img-fluid d-block mx-auto img_gallery"
-                src="https://nordicdesign.ca/wp-content/uploads/2017/03/meraki7.jpg"
-                // src={photo3}
+                // src="https://nordicdesign.ca/wp-content/uploads/2017/03/meraki7.jpg"
+                src={hair}
                 alt=""
               />
             </div>

@@ -61,7 +61,7 @@ const Shop = (props) => {
   return (
     <div className="container" id="shop">
       <div className="row">
-        <div className="col-3">
+        <div className="col-12 col-lg-3">
           <Categories
             category={category}
             subCategory={subCategory}
@@ -69,7 +69,7 @@ const Shop = (props) => {
             setSubCategory={(value) => setSubCategory(value)}
           />
         </div>
-        <div className="col-9">
+        <div className="col-12 col-lg-9">
           <div className="filters-container">
             <Filters filter={filter} setFilter={(value) => setFilter(value)} />
           </div>

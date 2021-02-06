@@ -51,10 +51,10 @@ const Product = (props) => {
   return (
     <div className="container" id="product">
       <div className="row product-container">
-        <div className="col-5 product-left">
+        <div className="col-lg-5 product-left text-center">
           <img src={cosmetic.image.default} alt="" />
         </div>
-        <div className="col-7 product-right">
+        <div className="col-lg-7 product-right">
           <h2>{cosmetic.title}</h2>
           <p className="product-desc">{cosmetic.description}</p>
           <p className="product-cap">{cosmetic.capacity}</p>

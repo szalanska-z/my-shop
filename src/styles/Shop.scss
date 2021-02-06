@@ -7,18 +7,34 @@
       text-align: center;
     }
     .categories-content {
-      h3 {
-        &.active {
-          background-color: $color-six;
-        }
+      .hair-cat {
         background-color: $header-color;
+      }
+      .body-cat {
+        background-color: $color-six;
+      }
+      .face-cat {
+        // background-color: $color-eight;
+        background-color: $color-thirteen;
+      }
+      h3 {
+        &.face-active {
+          background-color: black;
+        }
+        &.hair-active {
+          background-color: black;
+        }
+        &.body-active {
+          background-color: black;
+        }
+        // background-color: $header-color;
         font-size: 1.5rem;
         color: white;
         text-align: center;
         cursor: pointer;
         transition: 0.3s;
         &:hover {
-          background-color: $color-six;
+          background-color: black;
         }
       }
       p {
@@ -55,6 +71,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 3%;
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 360px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     .cosmetic-item {
       display: flex;
       flex-direction: column;

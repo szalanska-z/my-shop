@@ -1,7 +1,7 @@
-@import './Variables.scss';
+@import "./Variables.scss";
 
 #footer {
-	// background-color: $color-footer-bg;
+  // background-color: $color-footer-bg;
   background-color: $color-five;
   background-color: $color-six;
   position: absolute;
@@ -17,13 +17,13 @@
     }
     &:hover {
       .icon-social {
-        color:  $color-one;
+        color: $color-thirteen;
       }
     }
-	}
-	.logo_footer {
-		background-color: white;
-		width: 100px;
-		height: 100px;
-	}
+  }
+  .logo_footer {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+  }
 }
