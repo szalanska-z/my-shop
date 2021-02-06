@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Basket.scss";
 
 const BasketStep2 = (props) => {
@@ -10,6 +11,10 @@ const BasketStep2 = (props) => {
     let total = (item.amount * item.cosmetic.price).toFixed(2);
     totalAmount = (Number(totalAmount) + Number(total)).toFixed(2);
   });
+
+  const clearLocalStorage = () => {
+    localStorage.clear();
+  };
 
   return (
     <div className="basketStep2 px-3 px-sm-0">
@@ -23,6 +28,15 @@ const BasketStep2 = (props) => {
       <p>{state.phone}</p>
       <h3>Kwota zamówienia:</h3>
       <p className="basketStep-totalAmount">{totalAmount}zł</p>
+      <Link
+        to={{
+          pathname: `/shop`,
+        }}
+      >
+        <button className="btn btn_gallery" onClick={clearLocalStorage}>
+          Wróć do sklepu
+        </button>
+      </Link>
     </div>
   );
 };

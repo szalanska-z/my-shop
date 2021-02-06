@@ -10,8 +10,9 @@ const Product = (props) => {
   const addProduct = () => {
     // const productInput = document.getElementById("product-input").value;
     const productInput = prodNumber;
-    if (productInput === "") {
+    if (productInput === 0) {
       alert("Podaj ilość produktu");
+      return;
     } else {
       console.log(
         oldProducts.findIndex((product) => product.cosmetic.id === cosmetic.id)
@@ -43,7 +44,7 @@ const Product = (props) => {
     }
     if (type === "subtract") {
       newNumber--;
-      if (newNumber < 0) return;
+      if (newNumber < 1) return;
       setProdNumber(newNumber);
     }
   };
@@ -72,7 +73,7 @@ const Product = (props) => {
               type="number"
               id="product-input"
               value={prodNumber}
-              min={0}
+              min={1}
               onChange={(e) => setProdNumber(e.target.value)}
             />
             <span

@@ -8,7 +8,6 @@ const Shop = (props) => {
   const [category, setCategory] = useState("");
   const [subCategory, setSubCategory] = useState("");
   const [filter, setFilter] = useState("");
-  // const [filteredCosmetics, setFilteredCosmetics] = useState([]);
 
   useEffect(() => {
     if (props.location.state) {
@@ -16,11 +15,7 @@ const Shop = (props) => {
     }
   }, [props.location.state]);
 
-  // console.log(category, subCategory, filter)
-
   let newCosmetics = [...cosmetics];
-
-  // console.log(newCosmetics);
 
   const filterCosmetics = () => {
     if (category !== "") {

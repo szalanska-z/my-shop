@@ -14,7 +14,6 @@ const Categories = (props) => {
 
   return (
     <div id="categories" className="categories">
-      {/* <h2 className="categories--title">Kategorie</h2> */}
       <div className="categories-content">
         <div>
           <h3

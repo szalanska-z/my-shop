@@ -12,6 +12,8 @@ const Basket = () => {
   const [city, setCity] = useState("");
   const [mail, setMail] = useState("");
   const [phone, setPhone] = useState("");
+  const [isValidate, setIsValidate] = useState(false);
+  const [isModalActive, setIsModalActive] = useState(false);
 
   const state = { name, street, postCode, city, mail, phone };
   const stateMethods = {
@@ -23,13 +25,27 @@ const Basket = () => {
     setPhone: (value) => setPhone(value),
   };
 
+  const validateForm = (state) => {
+    setIsValidate(true);
+    setIsModalActive(false);
+    for (let key of Object.keys(state)) {
+      if (state[key].length === 0) {
+        setIsValidate(false);
+        setIsModalActive(true);
+      }
+    }
+  };
+
   const handleStepPrev = () => {
     if (step === "1") setStep("0");
     else if (step === "2") setStep("1");
   };
   const handleStepNext = () => {
+    if (step === "1") {
+      validateForm(state);
+    }
     if (step === "0") setStep("1");
-    else if (step === "1") setStep("2");
+    else if (step === "1" && isValidate) setStep("2");
   };
 
   return (
@@ -44,21 +60,32 @@ const Basket = () => {
       <div className="row basket-button px-3 d-flex justify-content-end">
         {step === "1" && (
           <button
-            className=" btn-prev btn-danger mr-auto"
+            className=" btn-prev mr-auto"
             onClick={() => handleStepPrev()}
           >
             Wstecz
           </button>
         )}
         {step !== "2" && (
-          <button
-            className="btn-next btn-warning"
-            onClick={() => handleStepNext()}
-          >
+          <button className="btn-next" onClick={() => handleStepNext()}>
             Przejdź dalej
           </button>
         )}
       </div>
+      {isModalActive && (
+        <div className="modalForm-container">
+          <div className="modalForm">
+            <p>UZUPEŁNIJ SWOJE DANE!</p>
+            <button
+              type="button"
+              className="btn modalForm-btn"
+              onClick={() => setIsModalActive(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

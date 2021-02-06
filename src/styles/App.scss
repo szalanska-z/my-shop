@@ -25,19 +25,27 @@ body {
   }
 }
 
+button:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
 nav {
   border-bottom: 1px solid black;
   transition: 0.3s ease;
   ul {
+    transition: 0.5s;
     li.nav-item {
       padding: 0 1rem;
-      transition: 0.3s;
+
       a {
         color: $color-three;
       }
       &:hover {
         a {
           text-decoration: none;
+          color: $header-color;
         }
       }
     }

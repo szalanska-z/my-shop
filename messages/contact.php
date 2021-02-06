@@ -42,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$mail->Port = 465;                                    //Set the SMTP port number - 587 for authenticated TLS
 	$mail->setFrom('ecoshop.webakademia@gmail.com', 'Eco Shop');     //Set who the message is to be sent from
 	$mail->addReplyTo($email);  //Set an alternative reply-to address
-	// $mail->addAddress('kontakt@wirtualnykelner.pl');  // Add a recipient innn!!!!!!!!!!!!!!!!!
 	$mail->addAddress('ecoshop.webakademia@gmail.com');  // Add a recipient innn!!!!!!!!!!!!!!!!!
 	$mail->SMTPDebug = 0; //Debug?
 

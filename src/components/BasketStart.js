@@ -4,7 +4,6 @@ import "../styles/Basket.scss";
 const BasketStart = () => {
   const [render, setRender] = useState(false);
   const oldProducts = JSON.parse(localStorage.getItem("products")) || [];
-  // console.log(oldProducts);
 
   let totalAmount = 0;
   oldProducts.forEach((item, index) => {
@@ -12,10 +11,8 @@ const BasketStart = () => {
     totalAmount = (Number(totalAmount) + Number(total)).toFixed(2);
   });
 
-  // console.log(oldProducts);
   const deleteProduct = (i) => {
     oldProducts.splice(i, 1);
-    // console.log(oldProducts);
     window.localStorage.setItem("products", JSON.stringify(oldProducts));
     setRender(!render);
   };

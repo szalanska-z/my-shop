@@ -8,7 +8,7 @@
       font-weight: 500;
     }
     .contact-text--bold {
-      // font-weight: bold;
+      font-weight: bold;
     }
   }
   .contact-right {
@@ -17,16 +17,29 @@
     }
   }
   .btn.btn_contact {
-    // background-color: black;
     background-color: $color-thirteen;
     color: black;
     padding: 0.8rem 0.6rem;
     letter-spacing: 1px;
+    outline: none;
+    box-shadow: none;
     transition: 0.3s;
     &:hover {
       background-color: black;
-      // border: 1px solid $color-thirteen;
       color: white;
     }
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .formInfo-error {
+    font-size: 1.2rem;
+    color: $color-two;
+  }
+  .formInfo-sent {
+    font-size: 1.2rem;
+    color: black;
   }
 }

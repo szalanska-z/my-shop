@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Slider from "../components/Slider";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import discount from '../images/discount-color.svg'
 import photo4 from "../images/others/handmade.png";
 import photo5 from "../images/others/natural.png";
 import photo6 from "../images/others/vegan.png";
@@ -86,7 +85,6 @@ const Home = () => {
             <div className="col-lg-6 mb-3">
               <img
                 className="img-fluid d-block mx-auto img_gallery"
-                // src="https://nordicdesign.ca/wp-content/uploads/2017/03/meraki7.jpg"
                 src={face}
                 alt=""
               />
@@ -94,12 +92,13 @@ const Home = () => {
             <div className="col-lg-6 text-center">
               <h3>Twarz</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestiae dolores reprehenderit aperiam dicta illo nostrum
-                nesciunt repudiandae, vero omnis ut provident corrupti deleniti
-                rem voluptatem officia, nulla debitis distinctio delectus.
+                Każda cera potrzebuje dogłębnego oczyszczania, nawilżania i
+                regeneracji. Polecamy naturalne kosmetyki do pielęgnacji twarzy
+                z wyjątkowymi eco formułami. W naszej ofercie znajdziesz: kremy,
+                eliksiry, serum, maski, żele do mycia. Bogate w aktywne
+                składniki, jak: kwas hialuronowy, witaminy, roślinne ekstrakty,
+                odżywcze oleje i masła.
               </p>
-              {/* <button className="btn btn_gallery" data-toggle="modal" data-target="#modal-drawers">Zobacz produkty</button> */}
               <Link
                 to={{
                   pathname: `/shop`,
@@ -114,7 +113,6 @@ const Home = () => {
             <div className="col-lg-6 order-lg-2 mb-3">
               <img
                 className="img-fluid d-block mx-auto img_gallery"
-                // src="https://nordicdesign.ca/wp-content/uploads/2017/03/meraki7.jpg"
                 src={body}
                 alt=""
               />
@@ -122,12 +120,12 @@ const Home = () => {
             <div className="col-lg-6 text-center order-lg-1 ">
               <h3>Ciało</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Pariatur, aliquid! Unde consectetur vero reiciendis eaque a
-                explicabo! Aut itaque sunt praesentium, aperiam temporibus nisi
-                eveniet aspernatur natus animi, eum minus.
+                Chcemy, aby codzienna pielęgnacja ciała stała się dla Ciebie
+                rytuałem piękna. W naszej ofercie znajdziesz aromatyczne żele do
+                kąpieli, pudry do kąpieli bogate w naturalne oleje roślinne,
+                masła do ciała, peelingi solne i cukrowe, oleje do masażu, masła
+                shea oraz kosmetyki do pielęgnacji dłoni i stóp.
               </p>
-              {/* <button className="btn btn_gallery" data-toggle="modal" data-target="#modal-beds" >Zobacz produkty</button> */}
               <Link
                 to={{
                   pathname: `/shop`,
@@ -142,7 +140,6 @@ const Home = () => {
             <div className="col-lg-6 mb-3">
               <img
                 className="img-fluid d-block mx-auto img_gallery"
-                // src="https://nordicdesign.ca/wp-content/uploads/2017/03/meraki7.jpg"
                 src={hair}
                 alt=""
               />
@@ -150,12 +147,13 @@ const Home = () => {
             <div className="col-lg-6 text-center">
               <h3>Włosy</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Molestiae dolores reprehenderit aperiam dicta illo nostrum
-                nesciunt repudiandae, vero omnis ut provident corrupti deleniti
-                rem voluptatem officia, nulla debitis distinctio delectus.
+                Oferujemy profesjonalne kosmetyki do pielęgnacji każdego rodzaju
+                włosów: naturalne szampony, naturalne odżywki do włosów,
+                peelingi do skóry głowy, maski regeneracyjne i odżywcze oraz
+                jedwab do włosów. Bogate w odżywcze składniki aktywne, roslinne
+                ekstrakty, witaminy, naturalne oleje, dzieki którym włosy będą
+                zdrowe i lśniące.
               </p>
-              {/* <button className="btn btn_gallery" data-toggle="modal" data-target="#modal-chairs">Zobacz produkty</button> */}
               <Link
                 to={{
                   pathname: `/shop`,
